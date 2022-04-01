@@ -71,14 +71,14 @@ export default function Home() {
                 <Text h3>Lead Frontend Developer</Text>
                 <Text label color="muted">Sunny at Sea | Stockholm, Sweden | 2017/11 - Present</Text>
                 <Text body>{`
-                  Currently I’m the lead frontend developer at Sunny at Sea. I discovered that becoming a “creative developer” was the perfect fit for my skills since that role requires knowledge in many areas; fullstack development, design, 3D, animation and graphics programming. My responsibilities include keeping up with the most modern technologies, building web applications and experiences, and mentoring new coworkers.
+                  Currently I’m the lead frontend developer at Sunny at Sea. My responsibilities include keeping up with the most modern technologies, building web applications and experiences, and mentoring new coworkers.
                 `}</Text>
               </Stack>
               <Stack column gap={2}>
                 <Text h3>Designer / Fullstack Developer</Text>
                 <Text label color="muted">Sunny at Sea | Stockholm, Sweden | 2014/11 - 2017/11</Text>
                 <Text body>{`
-                  I started at Sunny at Sea as a .NET intern, but they noticed my passion for design and decided to hire me as a designer/developer hybrid. Even though my internship was supposed to be 6 months long I got hired full time after just a little over two months. I took part in many exciting projects, including setting up the wayfinding system for Google’s HQ in Stockholm. My responsibilities were diverse; from creating and ordering printed materials for displays, to designing and developing websites.
+                  Starting out at Sunny at Sea I was as a .NET intern, but they soon noticed my passion for design, in addition to code, and decided to onboard me as a designer/developer hybrid. My responsibilities were diverse; anything from creating and ordering printed materials, to designing and developing websites.
                 `}</Text>
               </Stack>
               <Stack column gap={2}>
@@ -97,21 +97,21 @@ export default function Home() {
                 <Text h3>Japanese Language Degree</Text>
                 <Text label color="muted">ISI Kyoto | Kyoto, Japan | 2018-2019</Text>
                 <Text body>{`
-                  After living in Japan for a year and attending ISI Kyoto full-time, I was able to reach a basic understanding of everyday japanese. I studied up to the N3 level. During this time I also worked 50% at Sunny at Sea, and taught myself Flutter and Dart in my spare time.
+                  I was able to reach a basic understanding of Japanese & studied up to the N3 level.
                 `}</Text>
               </Stack>
               <Stack column gap={2}>
-                <Text h3>Polytechnic Degree - CS .NET</Text>
+                <Text h3>Polytechnic Degree - CS</Text>
                 <Text label color="muted">Nackademin | Stockholm, Sweden | 2012-2014</Text>
                 <Text body>{`
-                  We were taught .NET, C#, Javascript, SQL, Git, IIS, Computer Science, HTML, and CSS with the goal of being able to work as .NET developers.
+                  Computer Science, .NET, C#, Javascript, SQL, Git, IIS, HTML, and CSS.
                 `}</Text>
               </Stack>
               <Stack column gap={2}>
                 <Text h3>Polytechnic Degree - Digital Graphics</Text>
                 <Text label color="muted">Nackademin | Stockholm, Sweden | 2010-2012</Text>
                 <Text body>{`
-                  We were taught 3D modeling, design, animation, rendering, arts, and VFX with the goal of being able to work in the film or games industry.
+                  3D modeling, design, animation, rendering, classical arts, and VFX. The goal was to become staffers in the film or games industry.
                 `}</Text>
               </Stack>
             </Stack>

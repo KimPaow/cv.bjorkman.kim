@@ -176,17 +176,15 @@ export const {
 
 export const darkTheme = createTheme('dark-theme', {
   colors: {
-    // text_body: "rgb(208, 214, 224)",
-    text_body: "$white_alpha800",
+    text_body: "$white_alpha900",
     text_body_inverted: "$black_alpha700",
-    // text_muted: "rgb(138, 143, 152)",
-    text_muted: "$white_alpha500",
+    text_muted: "$white_alpha400",
     text_headline: "$white_alpha900",
     text_link: "$text_body",
     text_highlight_bg: "$primary400",
     text_highlight_color: "$text_body",
 
-    bg_body: "#060606",
+    bg_body: "$gray900",
 
     card_bg: "$white_alpha100",
     card_bg_disabled: "$white_alpha100",
@@ -208,19 +206,8 @@ export const lightTheme = createTheme('light-theme', {
     bg_body: "white",
 
     card_bg: "$black_alpha50",
-    card_bg_disabled: "$black_alpha100",
+    card_bg_disabled: "$black_alpha50",
     card_bg_hover: "$black_alpha100",
     card_border: "$black_alpha50",
-
-    // primary50: "$violet50",
-    // primary100: "$violet100",
-    // primary200: "#E1A19E",
-    // primary300: "#D57C77",
-    // primary400: "#C85650",
-    // primary500: "#AD3C36",
-    // primary600: "#882F2A",
-    // primary700: "#61221E",
-    // primary800: "#3A1412",
-    // primary900: "$violet900",
   },
 });
