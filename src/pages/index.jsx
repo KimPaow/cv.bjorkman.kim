@@ -13,9 +13,9 @@ export default function Home() {
     // Pass the pre-fetched data as the initial value of all SWR hooks
     <>
       <Head>
-        <title>Attuned Blog</title>
-        <meta name="description" content="The latest from us at Attuned" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Frontend Engineer | Kim Björkman</title>
+        <meta name="description" content="Frontend Engineer | Kim Björkman" />
+        <link rel="icon" href="/slack.png" />
       </Head>
       <PageWrapper>
         <Stack gap={5} css={{ flexDirection: 'column-reverse', fontWeight: 800, '@sm': { flexDirection: 'row' } }}>
