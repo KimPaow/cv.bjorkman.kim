@@ -18,13 +18,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageWrapper>
-        <Stack gap={5}>
+        <Stack gap={5} css={{ flexDirection: 'column-reverse', fontWeight: 800, '@sm': { flexDirection: 'row' } }}>
           <Stack column gap={5} css={{ flex: 2 }}>
             {/* <Box css={{ img: { borderRadius: '$lg' } }}>
               <Image src="/bw.jpeg" width={450} height={450} alt="profile picture" />
             </Box> */}
-            <Text h1>Hello, I&apos;m Kim</Text>
-            <Spacer y={4} />
+            <Text h1 css={{ display: 'none', '@md': { display: 'block' } }}>Hello, I&apos;m Kim</Text>
+            <Spacer y={4} css={{ display: 'none', '@md': { display: 'block' } }} />
 
             {/* Links */}
             <Stack gap={4}>
@@ -101,7 +101,7 @@ export default function Home() {
                 `}</Text>
               </Stack>
               <Stack column gap={2}>
-                <Text h3>Polytechnic Degree - .NET development</Text>
+                <Text h3>Polytechnic Degree - CS .NET</Text>
                 <Text label color="muted">Nackademin | Stockholm, Sweden | 2012-2014</Text>
                 <Text body>{`
                   We were taught .NET, C#, Javascript, SQL, Git, IIS, Computer Science, HTML, and CSS with the goal of being able to work as .NET developers.
@@ -118,9 +118,19 @@ export default function Home() {
 
           </Stack>
 
+          <Box css={{
+            display: 'block',
+            height: '2px',
+            backgroundColor: '$text_body',
+            '@md': {
+              display: 'none'
+            }
+          }} />
+
           {/* Intro - Right Col */}
           <Box css={{ flex: 1 }}>
             <Stack column gap={3} css={{ position: 'sticky', top: '20px' }}>
+              <Text h1 css={{ display: 'block', fontWeight: 800, '@md': { display: 'none' } }}>Hello, I&apos;m Kim</Text>
               <Spacer y={1} />
               <Box css={{ borderRadius: '$full', flexBasis: '20px', width: '20px', backgroundColor: '$primary500' }} />
               <Link to="#contact" navlink>Contact</Link>

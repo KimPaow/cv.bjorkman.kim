@@ -7,7 +7,7 @@ export const PageWrapper = styled('div', {
   width: '100%',
   marginX: 'auto',
   paddingY: '$5',
-  paddingX: '$3',
+  paddingX: '$4',
 
   '@sm': {
     paddingY: '$6'
