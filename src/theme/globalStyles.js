@@ -83,19 +83,4 @@ export const globalStyles = globalCss({
       color: '$text_muted',
     }
   },
-  li: {
-    position: 'relative',
-    marginLeft: '$3',
-
-    '&:before': {
-      content: '""',
-      backgroundColor: '$primary500',
-      position: 'absolute',
-      width: '$2',
-      height: '1px',
-      top: '50%',
-      left: 0,
-      transform: 'translate(calc(-$sizes$3), -50%)'
-    }
-  }
 });
