@@ -23,7 +23,7 @@ export default function Home() {
             {/* <Box css={{ img: { borderRadius: '$lg' } }}>
               <Image src="/bw.jpeg" width={450} height={450} alt="profile picture" />
             </Box> */}
-            <Text h1>Hello, I'm Kim</Text>
+            <Text h1>Hello, I&apos;m Kim</Text>
             <Spacer y={4} />
 
             {/* Links */}
