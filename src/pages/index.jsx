@@ -45,23 +45,6 @@ export default function Home() {
                   </Box>
                 </Stack>
               </Stack>
-              {/* <Stack column gap={3} css={{ flex: 1 }}>
-                <Text h2>Other</Text>
-                <Stack as="ul" column gap={3}>
-                  <Box as="li">
-                    <Text>1991-03-08</Text>
-                  </Box>
-                  <Box as="li">
-                    <Text as="a" href="https://github.com/KimPaow">Github</Text>
-                  </Box>
-                  <Box as="li">
-                    <Text as="a" href="https://twitter.com/Kim_Bjorkman_">Twitter</Text>
-                  </Box>
-                  <Box as="li">
-                    <Text as="a" href="https://medium.com/@kimbjrkman">Medium</Text>
-                  </Box>
-                </Stack>
-              </Stack> */}
             </Stack>
 
             <Stack gap={5} css={{ flexDirection: 'column', '@sm': { flexDirection: 'row' } }}>
@@ -72,14 +55,14 @@ export default function Home() {
                   <Text h3>Lead Frontend Developer</Text>
                   <Text label color="muted">Sunny at Sea | Stockholm, Sweden | 2017 →</Text>
                   <Text body>{`
-                  Currently I’m the lead frontend developer at Sunny at Sea. My responsibilities include keeping up with the most modern technologies, building web applications and experiences, and mentoring new coworkers.
+                  Responsibilities include keeping up with modern technologies, building web applications and experiences, and mentoring entry to mid level coworkers.
                 `}</Text>
                 </Stack>
                 <Stack column gap={2}>
                   <Text h3>Designer / Fullstack Developer</Text>
                   <Text label color="muted">Sunny at Sea | Stockholm, Sweden | 2014 - 2017</Text>
                   <Text body>{`
-                  Starting out at Sunny at Sea I was as a .NET intern, but they soon noticed my passion for design, in addition to code, and decided to onboard me as a designer/developer hybrid. My responsibilities were diverse; anything from creating and ordering printed materials, to designing and developing websites.
+                  I started out as a .NET intern. But after noticing my passion for design, in addition to code, I was onboarded as a designer/developer hybrid. My responsibilities were diverse; anything from creating and ordering printed materials, to designing and developing websites.
                 `}</Text>
                 </Stack>
                 <Stack column gap={2}>
@@ -98,7 +81,7 @@ export default function Home() {
                   <Text h3>Japanese Language Degree</Text>
                   <Text label color="muted">ISI Kyoto | Kyoto, Japan | 2018-2019</Text>
                   <Text body>{`
-                  I was able to reach a basic understanding of Japanese & studied up to the N3 level.
+                  I studied up to the N3 level and reached a basic understanding of Japanese.
                 `}</Text>
                 </Stack>
                 <Stack column gap={2}>
