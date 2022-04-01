@@ -64,55 +64,57 @@ export default function Home() {
               </Stack> */}
             </Stack>
 
-            {/* Work Experience */}
-            <Stack column gap={4}>
-              <Text h2 id="experience">Work Experience</Text>
-              <Stack column gap={2}>
-                <Text h3>Lead Frontend Developer</Text>
-                <Text label color="muted">Sunny at Sea | Stockholm, Sweden | 2017/11 - Present</Text>
-                <Text body>{`
+            <Stack gap={5} css={{ flexDirection: 'column', '@sm': { flexDirection: 'row' } }}>
+              {/* Work Experience */}
+              <Stack column gap={4}>
+                <Text h2 id="experience">Work Experience</Text>
+                <Stack column gap={2}>
+                  <Text h3>Lead Frontend Developer</Text>
+                  <Text label color="muted">Sunny at Sea | Stockholm, Sweden | 2017 →</Text>
+                  <Text body>{`
                   Currently I’m the lead frontend developer at Sunny at Sea. My responsibilities include keeping up with the most modern technologies, building web applications and experiences, and mentoring new coworkers.
                 `}</Text>
-              </Stack>
-              <Stack column gap={2}>
-                <Text h3>Designer / Fullstack Developer</Text>
-                <Text label color="muted">Sunny at Sea | Stockholm, Sweden | 2014/11 - 2017/11</Text>
-                <Text body>{`
+                </Stack>
+                <Stack column gap={2}>
+                  <Text h3>Designer / Fullstack Developer</Text>
+                  <Text label color="muted">Sunny at Sea | Stockholm, Sweden | 2014 - 2017</Text>
+                  <Text body>{`
                   Starting out at Sunny at Sea I was as a .NET intern, but they soon noticed my passion for design, in addition to code, and decided to onboard me as a designer/developer hybrid. My responsibilities were diverse; anything from creating and ordering printed materials, to designing and developing websites.
                 `}</Text>
-              </Stack>
-              <Stack column gap={2}>
-                <Text h3>Freelance Illustrator / Designer</Text>
-                <Text label color="muted">Stockholm, Sweden | 2010 - 2014</Text>
-                <Text body>{`
+                </Stack>
+                <Stack column gap={2}>
+                  <Text h3>Freelance Illustrator / Designer</Text>
+                  <Text label color="muted">Stockholm, Sweden | 2010 - 2014</Text>
+                  <Text body>{`
                   After graduating high-school I started freelancing as an illustrator/designer while working on my degree. I kept this up until 2014 when I finished school.
                 `}</Text>
+                </Stack>
               </Stack>
-            </Stack>
 
-            {/* Education */}
-            <Stack column gap={4}>
-              <Text h2 id="education">Education</Text>
-              <Stack column gap={2}>
-                <Text h3>Japanese Language Degree</Text>
-                <Text label color="muted">ISI Kyoto | Kyoto, Japan | 2018-2019</Text>
-                <Text body>{`
+              {/* Education */}
+              <Stack column gap={4}>
+                <Text h2 id="education">Education</Text>
+                <Stack column gap={2}>
+                  <Text h3>Japanese Language Degree</Text>
+                  <Text label color="muted">ISI Kyoto | Kyoto, Japan | 2018-2019</Text>
+                  <Text body>{`
                   I was able to reach a basic understanding of Japanese & studied up to the N3 level.
                 `}</Text>
-              </Stack>
-              <Stack column gap={2}>
-                <Text h3>Polytechnic Degree - CS</Text>
-                <Text label color="muted">Nackademin | Stockholm, Sweden | 2012-2014</Text>
-                <Text body>{`
+                </Stack>
+                <Stack column gap={2}>
+                  <Text h3>Polytechnic Degree - CS</Text>
+                  <Text label color="muted">Nackademin | Stockholm, Sweden | 2012-2014</Text>
+                  <Text body>{`
                   Computer Science, .NET, C#, Javascript, SQL, Git, IIS, HTML, and CSS.
                 `}</Text>
-              </Stack>
-              <Stack column gap={2}>
-                <Text h3>Polytechnic Degree - Digital Graphics</Text>
-                <Text label color="muted">Nackademin | Stockholm, Sweden | 2010-2012</Text>
-                <Text body>{`
+                </Stack>
+                <Stack column gap={2}>
+                  <Text h3>Polytechnic Degree - Digital Graphics</Text>
+                  <Text label color="muted">Nackademin | Stockholm, Sweden | 2010-2012</Text>
+                  <Text body>{`
                   3D modeling, design, animation, rendering, classical arts, and VFX. The goal was to become staffers in the film or games industry.
                 `}</Text>
+                </Stack>
               </Stack>
             </Stack>
 

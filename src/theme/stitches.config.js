@@ -184,7 +184,7 @@ export const darkTheme = createTheme('dark-theme', {
     text_highlight_bg: "$primary400",
     text_highlight_color: "$text_body",
 
-    bg_body: "$gray900",
+    bg_body: "$zinc800",
 
     card_bg: "$white_alpha100",
     card_bg_disabled: "$white_alpha100",
