@@ -41,7 +41,7 @@ export default function Home() {
                     <Text as="a" href="tel:+46 73 409 35 09">+46 73 409 35 09</Text>
                   </Box>
                   <Box as="li">
-                    <Text>Tavastgatan 5, Stockholm, Sweden</Text>
+                    <Text body css={{ lineHeight: 'inherit' }}>Tavastgatan 5, Stockholm, Sweden</Text>
                   </Box>
                 </Stack>
               </Stack>
@@ -139,8 +139,8 @@ export default function Home() {
               <Link to="#skills" navlink>Skills</Link>
               <Spacer y={4} />
               <Stack column gap={3}>
-                <Text preamble css={{ whiteSpace: 'pre-line' }}>
-                  {`I'm a Swede living in Fukuoka, Japan. Software is where i funnel my Being.`}
+                <Text preamble css={{ whiteSpace: 'pre-line', fontWeight: 500 }}>
+                  {`I'm a Swedish guy living in Fukuoka, Japan. Software is what i direct my Being into.`}
                 </Text>
               </Stack>
               <Spacer y={3} />

@@ -17,6 +17,8 @@ const BaseLink = styled('a', {
   variants: {
     navlink: {
       true: {
+        fontSize: '$4',
+        fontWeight: '600',
         fontFamily: '$navlink',
         color: '$text_muted',
 
