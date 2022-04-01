@@ -133,7 +133,7 @@ export default function Home() {
           <Box css={{ flex: 1 }}>
             <Stack column gap={3} css={{ position: 'sticky', top: '20px' }}>
               <Text h1 css={{ display: 'block', fontWeight: 800, '@md': { display: 'none' } }}>Hello, I&apos;m Kim</Text>
-              <Spacer y={1} />
+              <Spacer y={0} />
               <Box css={{ borderRadius: '$full', flexBasis: '20px', width: '20px', backgroundColor: '$primary500' }} />
               <Link to="#contact" navlink>Contact</Link>
               <Link to="#experience" navlink>Experience</Link>
