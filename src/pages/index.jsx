@@ -3,14 +3,12 @@ import PageWrapper from '@/components/dom/pagewrapper'
 import Text from '@/components/dom/text'
 import { Spacer, Stack } from '@/components/dom/flex'
 import Box from '@/components/dom/box'
-import Image from 'next/image'
 import { Link } from '@/components/dom/links'
 import Card from '@/components/dom/card'
 import { VscGithubInverted, VscTwitter, VscCircleLargeFilled } from 'react-icons/vsc'
 
 export default function Home() {
   return (
-    // Pass the pre-fetched data as the initial value of all SWR hooks
     <>
       <Head>
         <title>Frontend Engineer | Kim Björkman</title>
@@ -20,9 +18,6 @@ export default function Home() {
       <PageWrapper>
         <Stack gap={5} css={{ flexDirection: 'column-reverse', fontWeight: 800, '@sm': { flexDirection: 'row' } }}>
           <Stack column gap={5} css={{ flex: 2 }}>
-            {/* <Box css={{ img: { borderRadius: '$lg' } }}>
-              <Image src="/bw.jpeg" width={450} height={450} alt="profile picture" />
-            </Box> */}
             <Text h1 css={{ display: 'none', '@md': { display: 'block' } }}>Hello, I&apos;m Kim</Text>
             <Spacer y={4} css={{ display: 'none', '@md': { display: 'block' } }} />
 
