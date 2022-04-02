@@ -27,22 +27,6 @@ const BaseLink = styled('a', {
         }
       }
     },
-    pagination: {
-      true: {
-        padding: '$2',
-        borderRadius: '$md',
-        color: '$text_body',
-
-        '&:hover': {
-          background: 'linear-gradient(92.88deg, rgb(69, 94, 181) 9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%)',
-          color: '$primaryContrast'
-        },
-
-        '&:focus': {
-          boxShadow: '0 0 0 1px $colors$primary400'
-        },
-      }
-    },
     disabled: {
       true: {
         color: '$text_muted',
@@ -79,7 +63,7 @@ const BaseLink = styled('a', {
     },
     active: {
       true: {
-        color: '$primary500'
+        color: '$text_body'
       }
     },
   }

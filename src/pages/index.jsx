@@ -3,11 +3,9 @@ import PageWrapper from '@/components/dom/pagewrapper'
 import Text from '@/components/dom/text'
 import { Spacer, Stack } from '@/components/dom/flex'
 import Box from '@/components/dom/box'
-import { Link } from '@/components/dom/links'
-import Card from '@/components/dom/card'
-import { VscGithubInverted, VscTwitter, VscCircleLargeFilled } from 'react-icons/vsc'
+import { SideNav } from '@/components/dom/sidenav'
 
-export default function Home() {
+export default function Home({ title }) {
   return (
     <>
       <Head>
@@ -18,29 +16,8 @@ export default function Home() {
       <PageWrapper>
         <Stack gap={5} css={{ flexDirection: 'column-reverse', fontWeight: 800, '@sm': { flexDirection: 'row' } }}>
           <Stack column gap={5} css={{ flex: 2 }}>
-            <Text h1 css={{ display: 'none', '@md': { display: 'block' } }}>Hello, I&apos;m Kim</Text>
+            <Text h1 css={{ display: 'none', '@md': { display: 'block' } }}>{title}</Text>
             <Spacer y={4} css={{ display: 'none', '@md': { display: 'block' } }} />
-
-            {/* Links */}
-            <Stack gap={4}>
-              <Stack column gap={3} css={{ flex: 1 }}>
-                <Text h2 id="contact">Contact</Text>
-                <Stack as="ul" column gap={3}>
-                  <Box as="li">
-                    <Text as="a" href="https://www.bjorkman.kim">www.bjorkman.kim</Text>
-                  </Box>
-                  <Box as="li">
-                    <Text as="a" href="mailto:hello@bjorkman.kim">hello@bjorkman.kim</Text>
-                  </Box>
-                  <Box as="li">
-                    <Text as="a" href="tel:+46 73 409 35 09">+46 73 409 35 09</Text>
-                  </Box>
-                  <Box as="li">
-                    <Text body css={{ lineHeight: 'inherit' }}>Tavastgatan 5, Stockholm, Sweden</Text>
-                  </Box>
-                </Stack>
-              </Stack>
-            </Stack>
 
             <Stack gap={5} css={{ flexDirection: 'column', '@sm': { flexDirection: 'row' } }}>
               {/* Work Experience */}
@@ -101,6 +78,7 @@ export default function Home() {
           <Box css={{
             display: 'block',
             height: '2px',
+
             backgroundColor: '$text_body',
             '@md': {
               display: 'none'
@@ -109,34 +87,18 @@ export default function Home() {
 
           {/* Intro - Right Col */}
           <Box css={{ flex: 1 }}>
-            <Stack column gap={3} css={{ position: 'sticky', top: '20px' }}>
-              <Text h1 css={{ display: 'block', fontWeight: 800, '@md': { display: 'none' } }}>Hello, I&apos;m Kim</Text>
-              <Spacer y={0} />
-              <Box css={{ borderRadius: '$full', flexBasis: '20px', width: '20px', backgroundColor: '$primary500' }} />
-              <Link to="#contact" navlink>Contact</Link>
-              <Link to="#experience" navlink>Experience</Link>
-              <Link to="#education" navlink>Education</Link>
-              <Link to="#skills" navlink>Skills</Link>
-              <Spacer y={4} />
-              <Stack column gap={3}>
-                <Text preamble css={{ whiteSpace: 'pre-line', fontWeight: 500 }}>
-                  {`I'm a Swedish guy living in Fukuoka, Japan. Software is what i direct my Being into.`}
-                </Text>
-              </Stack>
-              <Spacer y={3} />
-              <Card isLink as={Link} to="https://www.bjorkman.kim" css={{ marginRight: 'auto' }}>
-                <VscCircleLargeFilled color="currentColor" />&nbsp;&nbsp;Check out my portfolio
-              </Card>
-              <Card isLink as={Link} to="https://github.com/KimPaow" css={{ marginRight: 'auto' }}>
-                <VscGithubInverted color="currentColor" />&nbsp;&nbsp;Stalk my Github
-              </Card>
-              <Card isLink as={Link} to="https://twitter.com/Kim_Bjorkman_" css={{ marginRight: 'auto' }}>
-                <VscTwitter color="currentColor" />&nbsp;&nbsp;Follow me on Twitter
-              </Card>
-            </Stack>
+            <SideNav title />
           </Box>
         </Stack>
       </PageWrapper>
     </>
   )
+}
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      title: "Hello, I'm Kim"
+    }
+  }
 }
