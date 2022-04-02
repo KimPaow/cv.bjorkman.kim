@@ -78,8 +78,9 @@ export default function Home({ title }) {
           <Box css={{
             display: 'block',
             height: '2px',
-
             backgroundColor: '$text_body',
+            marginY: '$3',
+
             '@md': {
               display: 'none'
             }
