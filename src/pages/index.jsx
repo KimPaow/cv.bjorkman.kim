@@ -17,7 +17,7 @@ export default function Home({ title }) {
         <Stack gap={5} css={{ flexDirection: 'column-reverse', fontWeight: 800, '@sm': { flexDirection: 'row' } }}>
           <Stack column gap={5} css={{ flex: 2 }}>
             <Text h1 css={{ display: 'none', '@md': { display: 'block' } }}>{title}</Text>
-            <Spacer y={4} css={{ display: 'none', '@md': { display: 'block' } }} />
+            <Spacer y={5} css={{ display: 'none', '@md': { display: 'block' } }} />
 
             <Stack gap={5} css={{ flexDirection: 'column', '@sm': { flexDirection: 'row' } }}>
               {/* Work Experience */}
