@@ -79,7 +79,7 @@ export default function Home({ title }) {
             display: 'block',
             height: '2px',
             backgroundColor: '$text_body',
-            marginY: '$3',
+            marginY: '$5',
 
             '@md': {
               display: 'none'
