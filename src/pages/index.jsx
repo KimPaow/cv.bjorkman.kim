@@ -1,16 +1,22 @@
 import Head from 'next/head'
+import { groq } from 'next-sanity'
+import { getClient } from '@/sanity/sanity.server'
 import PageWrapper from '@/components/dom/pagewrapper'
 import Text from '@/components/dom/text'
 import { Spacer, Stack } from '@/components/dom/flex'
 import Box from '@/components/dom/box'
+import { ListItem } from '@/components/dom/_common'
 import { SideNav } from '@/components/dom/sidenav'
 
-export default function Home({ title }) {
+export default function Home({ data, title }) {
+  const { info, experience, education } = data || {}
+  const { basic, socials, contact } = info || {}
+
   return (
     <>
       <Head>
         <title>Frontend Engineer | Kim Björkman</title>
-        <meta name="description" content="Frontend Engineer | Kim Björkman" />
+        <meta name="description" content={`Frontend Engineer | ${basic?.firstname} ${basic?.lastname}`} />
         <link rel="icon" href="/slack.png" />
       </Head>
       <PageWrapper>
@@ -23,53 +29,13 @@ export default function Home({ title }) {
               {/* Work Experience */}
               <Stack column gap={4}>
                 <Text h2 id="experience">Work Experience</Text>
-                <Stack column gap={2}>
-                  <Text h3>Lead Frontend Developer</Text>
-                  <Text label color="muted">Sunny at Sea | Stockholm, Sweden | 2017 →</Text>
-                  <Text body>{`
-                  Responsibilities include keeping up with modern technologies, building web applications and experiences, and mentoring entry to mid level coworkers.
-                `}</Text>
-                </Stack>
-                <Stack column gap={2}>
-                  <Text h3>Designer / Fullstack Developer</Text>
-                  <Text label color="muted">Sunny at Sea | Stockholm, Sweden | 2014 - 2017</Text>
-                  <Text body>{`
-                  I started out as a .NET intern. But after noticing my passion for design, in addition to code, I was onboarded as a designer/developer hybrid. My responsibilities were diverse; anything from creating and ordering printed materials, to designing and developing websites.
-                `}</Text>
-                </Stack>
-                <Stack column gap={2}>
-                  <Text h3>Freelance Illustrator / Designer</Text>
-                  <Text label color="muted">Stockholm, Sweden | 2010 - 2014</Text>
-                  <Text body>{`
-                  After graduating high-school I started freelancing as an illustrator/designer while working on my degree. I kept this up until 2014 when I finished school.
-                `}</Text>
-                </Stack>
+                {experience?.map(xp => <ListItem key={xp._id} {...xp} />)}
               </Stack>
 
               {/* Education */}
               <Stack column gap={4}>
                 <Text h2 id="education">Education</Text>
-                <Stack column gap={2}>
-                  <Text h3>Japanese Language Degree</Text>
-                  <Text label color="muted">ISI Kyoto | Kyoto, Japan | 2018-2019</Text>
-                  <Text body>{`
-                  I studied up to the N3 level and reached a basic understanding of Japanese.
-                `}</Text>
-                </Stack>
-                <Stack column gap={2}>
-                  <Text h3>Polytechnic Degree - CS</Text>
-                  <Text label color="muted">Nackademin | Stockholm, Sweden | 2012-2014</Text>
-                  <Text body>{`
-                  Computer Science, .NET, C#, Javascript, SQL, Git, IIS, HTML, and CSS.
-                `}</Text>
-                </Stack>
-                <Stack column gap={2}>
-                  <Text h3>Polytechnic Degree - Digital Graphics</Text>
-                  <Text label color="muted">Nackademin | Stockholm, Sweden | 2010-2012</Text>
-                  <Text body>{`
-                  3D modeling, design, animation, rendering, classical arts, and VFX. The goal was to become staffers in the film or games industry.
-                `}</Text>
-                </Stack>
+                {education?.map(xp => <ListItem key={xp._id} {...xp} />)}
               </Stack>
             </Stack>
 
@@ -88,7 +54,7 @@ export default function Home({ title }) {
 
           {/* Intro - Right Col */}
           <Box css={{ flex: 1 }}>
-            <SideNav title />
+            <SideNav title intro={basic.intro} links={socials} contact={contact} />
           </Box>
         </Stack>
       </PageWrapper>
@@ -96,10 +62,41 @@ export default function Home({ title }) {
   )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ preview = false }) => {
+  const query = groq`{
+    "info": *[_type == "info"][0] {
+      "basic": {
+        firstname,
+        lastname,
+        intro,
+      },
+      "contact": {
+        email,
+        phone,
+        address,
+      },
+      "socials": {
+        portfolioUrl,
+        github,
+        twitter,
+      },
+    },
+    "experience": *[_type == "experience"] | order(orderRank) {
+      "institution": company,
+      ...,
+    },
+    "education": *[_type == "education"] | order(orderRank) {
+      ...,
+    }
+  }`
+
+  const data = await getClient(preview).fetch(query)
   return {
     props: {
-      title: "Hello, I'm Kim"
+      title: "Hello, I'm Kim",
+      data,
+      query,
+      preview
     }
   }
 }

@@ -1,12 +1,16 @@
 import Head from 'next/head'
+import { groq } from 'next-sanity'
+import { getClient } from '@/sanity/sanity.server'
 import PageWrapper from '@/components/dom/pagewrapper'
 import Text from '@/components/dom/text'
 import { Spacer, Stack } from '@/components/dom/flex'
 import Box from '@/components/dom/box'
 import { SideNav } from '@/components/dom/sidenav'
 
-export default function Home({ title }) {
-  console.log('title: ', title)
+export default function Home({ data, title }) {
+  const { info } = data || {}
+  const { basic = {}, socials, contact } = info || {}
+
   return (
     <>
       <Head>
@@ -19,15 +23,11 @@ export default function Home({ title }) {
           <Stack column gap={5} css={{ flex: 2 }}>
             <Text h1 css={{ display: 'none', '@md': { display: 'block' } }}>{title}</Text>
             <Spacer y={4} css={{ display: 'none', '@md': { display: 'block' } }} />
-
-            {/* Left Col */}
-            <Stack column gap={4}>
-              <Text preamble css={{ maxWidth: '30ch', whiteSpace: 'pre-line', fontWeight: 500 }}>
-                {`I'm a Swedish guy living in Fukuoka, Japan. Software is what i direct my Being into.`}
+            {basic.about && <Stack column gap={4}>
+              <Text preamble css={{ maxWidth: '35ch', whiteSpace: 'pre-line', fontWeight: 500 }}>
+                {basic.about}
               </Text>
-            </Stack>
-            {/* END Left Col */}
-
+            </Stack>}
           </Stack>
 
           <Box css={{
@@ -42,7 +42,7 @@ export default function Home({ title }) {
 
           {/* Intro - Right Col */}
           <Box css={{ flex: 1 }}>
-            <SideNav title />
+            <SideNav title links={socials} contact={contact} image={basic.profilepic} />
           </Box>
         </Stack>
       </PageWrapper>
@@ -50,10 +50,40 @@ export default function Home({ title }) {
   )
 }
 
-export const getStaticProps = async () => {
+
+
+export const getStaticProps = async ({ preview = false }) => {
+  const query = groq`{
+    "info": *[_type == "info"][0] {
+      "basic": {
+        profilepic {
+          ...,
+          asset->{
+            ...,
+          }
+        },
+        about,
+      },
+      "contact": {
+        email,
+        phone,
+        address,
+      },
+      "socials": {
+        portfolioUrl,
+        github,
+        twitter,
+      },
+    },
+  }`
+
+  const data = await getClient(preview).fetch(query)
   return {
     props: {
-      title: 'Hej'
+      title: "Hallå",
+      data,
+      query,
+      preview
     }
   }
 }
