@@ -54,7 +54,7 @@ export default function Home({ data, title }) {
 
           {/* Intro - Right Col */}
           <Box css={{ flex: 1 }}>
-            <SideNav title intro={basic.intro} links={socials} contact={contact} />
+            <SideNav title={title} intro={basic.intro} links={socials} contact={contact} />
           </Box>
         </Stack>
       </PageWrapper>

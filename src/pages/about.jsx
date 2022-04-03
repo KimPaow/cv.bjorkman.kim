@@ -43,7 +43,7 @@ export default function Home({ data, title }) {
 
           {/* Intro - Right Col */}
           <Box css={{ flex: 1 }}>
-            <SideNav title links={socials} contact={contact} image={basic.profilepic} />
+            <SideNav title={title} links={socials} contact={contact} image={basic.profilepic} />
           </Box>
         </Stack>
       </PageWrapper>

@@ -19,6 +19,7 @@ const Circle = styled(Box, {
 const MobileText = styled(Text, {
   display: 'block',
   fontWeight: 800,
+
   '@md': {
     display: 'none'
   }
@@ -47,12 +48,13 @@ const ExternalLinks = ({ github, portfolioUrl, twitter }) => (
   </>
 )
 
-export const SideNav = ({ title = "Hello, I'm Kim", intro, links, image, contact = {} }) => {
+export const SideNav = ({ title, intro, links, image, contact = {} }) => {
+  console.log('title: ', title)
   return (
     <Stack column gap={3} css={{ position: 'sticky', top: '20px' }}>
-      <MobileText h1>
+      {title && <MobileText h1>
         {title}
-      </MobileText>
+      </MobileText>}
       <Spacer y={0} />
       <Circle />
       <Nav />
