@@ -5,7 +5,7 @@ import Card from '@/components/dom/card'
 import Text from '@/components/dom/text'
 import Box from '@/components/dom/box'
 import { Link } from '@/components/dom/links'
-import { VscCircleLargeFilled, VscGithubInverted, VscTwitter } from 'react-icons/vsc'
+import { VscCircleLargeFilled, VscGithubInverted, VscTwitter, VscFilePdf } from 'react-icons/vsc'
 import { styled } from '@/theme'
 import Image from '@/components/dom/image'
 
@@ -45,11 +45,13 @@ const ExternalLinks = ({ github, portfolioUrl, twitter }) => (
     {twitter && <Card isLink as={Link} to={twitter} css={{ marginRight: 'auto' }}>
       <VscTwitter color="currentColor" />&nbsp;&nbsp;Follow me on Twitter
     </Card>}
+    <Card isLink as={Link} to='/kim-bjorkman-resume.pdf' css={{ marginRight: 'auto' }}>
+      <VscFilePdf color="currentColor" />&nbsp;&nbsp;Download PDF
+    </Card>
   </>
 )
 
 export const SideNav = ({ title, intro, links, image, contact = {} }) => {
-  console.log('title: ', title)
   return (
     <Stack column gap={3} css={{ position: 'sticky', top: '20px' }}>
       {title && <MobileText h1>
