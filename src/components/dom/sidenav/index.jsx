@@ -46,7 +46,7 @@ const ExternalLinks = ({ github, portfolioUrl, twitter }) => (
       <VscTwitter color="currentColor" />&nbsp;&nbsp;Follow me on Twitter
     </Card>}
     <Card isLink as={Link} to='/kim-bjorkman-resume.pdf' css={{ marginRight: 'auto' }}>
-      <VscFilePdf color="currentColor" />&nbsp;&nbsp;Download PDF
+      <VscFilePdf color="currentColor" />&nbsp;&nbsp;Download as PDF
     </Card>
   </>
 )
