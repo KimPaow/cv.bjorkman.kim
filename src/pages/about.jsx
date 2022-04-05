@@ -16,7 +16,7 @@ export default function Home({ data, title }) {
       <Head>
         <title>{title} | Kim Björkman</title>
         <meta name="description" content="Frontend Engineer | Kim Björkman" />
-        <link rel="icon" href="/slack.png" />
+        <link rel="icon" href="/favicon-rounded.png" />
       </Head>
       <PageWrapper>
         <Stack gap={5} css={{ flexDirection: 'column-reverse', fontWeight: 800, '@sm': { flexDirection: 'row' } }}>
