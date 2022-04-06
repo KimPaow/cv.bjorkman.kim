@@ -11,9 +11,10 @@ import Image from '@/components/dom/image'
 
 const Circle = styled(Box, {
   borderRadius: '$full',
-  flexBasis: '20px',
-  width: '20px',
-  backgroundColor: '$primary500'
+  height: '100%',
+  width: '100%',
+  backgroundColor: '$primary500',
+  transition: 'background-color 0.2s ease-in-out'
 })
 
 const MobileText = styled(Text, {
@@ -58,7 +59,13 @@ export const SideNav = ({ title, intro, links, image, contact = {} }) => {
         {title}
       </MobileText>}
       <Spacer y={0} />
-      <Circle />
+      <Link to="/" css={{
+        flexBasis: '20px',
+        width: '20px',
+        [`&:hover ${Circle}`]: {
+          backgroundColor: '$primary600'
+        }
+      }}><Circle /></Link>
       <Nav />
       <Spacer y={4} />
 
