@@ -33,7 +33,7 @@ const Nav = () => {
   return <>
     <Link to="/about" active={route === '/about'} navlink>About</Link>
     <Link to="/#experience" navlink>Experience</Link>
-    <Link to="/#education" onClick={() => trackGoal('T2F7LLRN')} navlink>Education</Link>
+    <Link to="/#education" navlink>Education</Link>
   </>
 }
 
@@ -48,7 +48,7 @@ const ExternalLinks = ({ github, portfolioUrl, twitter }) => (
     {twitter && <Card isLink as={Link} to={twitter} css={{ marginRight: 'auto' }}>
       <VscTwitter color="currentColor" />&nbsp;&nbsp;Follow me on Twitter
     </Card>}
-    <Card isLink as={Link} to='/kim-bjorkman-resume.pdf' css={{ marginRight: 'auto' }}>
+    <Card isLink as={Link} to='/kim-bjorkman-resume.pdf' css={{ marginRight: 'auto' }} onClick={() => trackGoal('T2F7LLRN')}>
       <VscFilePdf color="currentColor" />&nbsp;&nbsp;Download as PDF
     </Card>
   </>
