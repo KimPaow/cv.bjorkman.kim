@@ -39,13 +39,13 @@ const Nav = () => {
 
 const ExternalLinks = ({ github, portfolioUrl, twitter }) => (
   <>
-    {portfolioUrl && <Card isLink as={Link} to={portfolioUrl} css={{ marginRight: 'auto' }}>
+    {portfolioUrl && <Card isLink as={Link} to={portfolioUrl} css={{ marginRight: 'auto' }} onClick={() => trackGoal('IFTGJ6HR')}>
       <VscCircleLargeFilled color="currentColor" />&nbsp;&nbsp;Check out my portfolio
     </Card>}
-    {github && <Card isLink as={Link} to={github} css={{ marginRight: 'auto' }}>
+    {github && <Card isLink as={Link} to={github} css={{ marginRight: 'auto' }} onClick={() => trackGoal('MKB0HZMA')}>
       <VscGithubInverted color="currentColor" />&nbsp;&nbsp;Go to my Github
     </Card>}
-    {twitter && <Card isLink as={Link} to={twitter} css={{ marginRight: 'auto' }}>
+    {twitter && <Card isLink as={Link} to={twitter} css={{ marginRight: 'auto' }} onClick={() => trackGoal('KSCPP3XG')}>
       <VscTwitter color="currentColor" />&nbsp;&nbsp;Follow me on Twitter
     </Card>}
     <Card isLink as={Link} to='/kim-bjorkman-resume.pdf' css={{ marginRight: 'auto' }} onClick={() => trackGoal('T2F7LLRN')}>
