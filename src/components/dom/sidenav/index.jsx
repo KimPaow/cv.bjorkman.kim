@@ -1,5 +1,7 @@
 
 import { useRouter } from 'next/router'
+import { trackGoal } from 'fathom-client';
+
 import { Stack, Spacer } from '@/components/dom/flex'
 import Card from '@/components/dom/card'
 import Text from '@/components/dom/text'
@@ -31,7 +33,7 @@ const Nav = () => {
   return <>
     <Link to="/about" active={route === '/about'} navlink>About</Link>
     <Link to="/#experience" navlink>Experience</Link>
-    <Link to="/#education" navlink>Education</Link>
+    <Link to="/#education" onClick={() => trackGoal('T2F7LLRN')} navlink>Education</Link>
   </>
 }
 
