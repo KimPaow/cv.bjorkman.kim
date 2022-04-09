@@ -1,18 +1,6 @@
-# Attuned Assignment
+# Online Resume
 
-[See the live version here](https://attuned-assignment.vercel.app/)
+[See the live version here](https://cv.bjorkman.kim/)
 
-## Running the project
-
-From the root, follow these steps:
-
-1. Run `yarn`
-2. Run `yarn dev`
-
-## Libraries used
-
-- [Next.js](https://nextjs.org/)
-- [Stitches](https://stitches.dev/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [React](https://reactjs.org/)
-- [Redux + Redux Toolkit](https://redux-toolkit.js.org/)
+## About the project
+This site fetches data from my personal instance of Sanity CMS, where I keep my work/education history, social links, and other content.
