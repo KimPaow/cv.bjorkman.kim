@@ -24,7 +24,7 @@ export default function Home({ data, title }) {
             <Text h1 css={{ display: 'none', '@md': { display: 'block' } }}>{title}</Text>
             <Spacer y={4} css={{ display: 'none', '@md': { display: 'block' } }} />
             {basic.about && <Stack column gap={4}>
-              <Text preamble css={{ maxWidth: '35ch', whiteSpace: 'pre-line', fontWeight: 500 }}>
+              <Text as="p" preamble css={{ maxWidth: '35ch', whiteSpace: 'pre-line', fontWeight: 500 }}>
                 {basic.about}
               </Text>
             </Stack>}
